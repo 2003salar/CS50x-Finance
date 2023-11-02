@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Delete Account
+{% endblock %}
+
+
+{% block main %}
+    <form action="/delete_account" method="post">
+        <div class="mb-3">
+            <h5>This action is permenant and cannot be undone!</h5>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Delete</button>
+    </form>
+{% endblock %}
